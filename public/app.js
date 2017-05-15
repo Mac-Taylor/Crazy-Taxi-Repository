@@ -35,6 +35,10 @@ let View = require('ampersand-view');
 module.exports = View.extend({
     template: document.querySelector('#grid-template').innerHTML,
 
+    events: {
+        
+    }
+
 });
 },{"ampersand-view":621}],4:[function(require,module,exports){
 var assign = require('lodash/assign');
