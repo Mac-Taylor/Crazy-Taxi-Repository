@@ -13,7 +13,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-    return gulp.src('scss/style.scss')
+    return gulp.src('style.scss')
         .pipe(sass())
         .pipe(gulp.dest(OUTPUT_DIRECTORY));
 });
