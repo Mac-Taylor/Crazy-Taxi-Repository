@@ -30,16 +30,39 @@ module.exports = State.extend({
     },
 });
 },{"ampersand-state":402}],3:[function(require,module,exports){
+
 let View = require('ampersand-view');
 
 module.exports = View.extend({
     template: document.querySelector('#grid-template').innerHTML,
 
     events: {
-        
-    }
+        'click .leftbutton': 'moveLeft',
+        'click .righttbutton': 'moveRight',
+        'click .upbutton': 'moveUp',
+        'click .downbutton': 'moveDown',
+    },
+
+    moveLeft: function () {
+        this.model.taxiX = this.model.taxiX - 1;
+        this.model.gas = this.model.gas - 1;
+    },
+    moveRight: function () {
+        this.model.taxiX = this.model.taxiX + 1;
+        this.model.gas = this.model.gas - 1;
+    },
+    moveUp: function () {
+        this.model.taxiY = this.model.taxiY + 1;
+        this.model.gas = this.model.gas - 1;
+    },
+    moveDown: function () {
+        this.model.taxiY = this.model.taxiY - 1;
+        this.model.gas = this.model.gas - 1;
+    },
+
 
 });
+
 },{"ampersand-view":621}],4:[function(require,module,exports){
 var assign = require('lodash/assign');
 
