@@ -36,9 +36,15 @@ let View = require('ampersand-view');
 module.exports = View.extend({
     template: document.querySelector('#grid-template').innerHTML,
 
+    bindings: {
+        'model.taxiX': '.x-value',
+        'model.taxiY': '.y-value',
+        'model.gas': '.gasoline',
+    },
+
     events: {
         'click .leftbutton': 'moveLeft',
-        'click .righttbutton': 'moveRight',
+        'click .rightbutton': 'moveRight',
         'click .upbutton': 'moveUp',
         'click .downbutton': 'moveDown',
     },
@@ -46,21 +52,23 @@ module.exports = View.extend({
     moveLeft: function () {
         this.model.taxiX = this.model.taxiX - 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Left!')
     },
     moveRight: function () {
         this.model.taxiX = this.model.taxiX + 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Right!');
     },
     moveUp: function () {
         this.model.taxiY = this.model.taxiY + 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Up!');
     },
     moveDown: function () {
         this.model.taxiY = this.model.taxiY - 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Down!')
     },
-
-
 });
 
 },{"ampersand-view":621}],4:[function(require,module,exports){

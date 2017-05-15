@@ -5,14 +5,14 @@ module.exports = View.extend({
     template: document.querySelector('#grid-template').innerHTML,
 
     bindings: {
-        'model.taxiX': '',
-        'model.taxiY': '',
-        'model.gas': ''
+        'model.taxiX': '.x-value',
+        'model.taxiY': '.y-value',
+        'model.gas': '.gasoline', // need to make it so that gas can't drop below 0.
     },
 
     events: {
         'click .leftbutton': 'moveLeft',
-        'click .righttbutton': 'moveRight',
+        'click .rightbutton': 'moveRight',
         'click .upbutton': 'moveUp',
         'click .downbutton': 'moveDown',
     },
@@ -35,6 +35,10 @@ module.exports = View.extend({
     moveDown: function () {
         this.model.taxiY = this.model.taxiY - 1;
         this.model.gas = this.model.gas - 1;
-
+        console.log('Moved Down!')
+    },
+    render: function() {
+        console.log('Render!');
+        this.renderWithTemplate();
     },
 });
