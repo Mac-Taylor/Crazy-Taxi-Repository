@@ -39,7 +39,7 @@ module.exports = View.extend({
     bindings: {
         'model.taxiX': '.x-value',
         'model.taxiY': '.y-value',
-        'model.gas': '.gasoline',
+        'model.gas': '.gasoline', // need to make it so that gas can't drop below 0.
     },
 
     events: {
@@ -68,6 +68,10 @@ module.exports = View.extend({
         this.model.taxiY = this.model.taxiY - 1;
         this.model.gas = this.model.gas - 1;
         console.log('Moved Down!')
+    },
+    render: function() {
+        console.log('Render!');
+        this.renderWithTemplate();
     },
 });
 
