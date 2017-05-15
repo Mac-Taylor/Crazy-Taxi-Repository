@@ -58,8 +58,7 @@ module.exports = View.extend({
         return row + ' ' + column;
     },
     highlight: function () {
-        document.querySelector(this.whereAreYou(this.model.taxiX, this.model.taxiY)).highlight;
-
+        document.querySelector(this.whereAreYou(this.model.taxiX, this.model.taxiY)).classList.add('taxi-location');
     },
     render: function () {
         console.log('Render!');
