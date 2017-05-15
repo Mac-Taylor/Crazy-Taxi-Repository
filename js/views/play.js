@@ -27,6 +27,4 @@ module.exports = View.extend({
         this.model.taxiY = this.model.taxiY - 1;
         this.model.gas = this.model.gas - 1;
     },
-
-
 });
