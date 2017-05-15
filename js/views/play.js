@@ -20,17 +20,21 @@ module.exports = View.extend({
     moveLeft: function () {
         this.model.taxiX = this.model.taxiX - 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Left!')
     },
     moveRight: function () {
         this.model.taxiX = this.model.taxiX + 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Right!');
     },
     moveUp: function () {
         this.model.taxiY = this.model.taxiY + 1;
         this.model.gas = this.model.gas - 1;
+        console.log('Moved Up!');
     },
     moveDown: function () {
         this.model.taxiY = this.model.taxiY - 1;
         this.model.gas = this.model.gas - 1;
+
     },
 });
