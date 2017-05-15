@@ -5,6 +5,7 @@ module.exports = State.extend({
     props: {
         passX: 'number',
         passY: 'number',
+        destination: 
         
     },
 });
