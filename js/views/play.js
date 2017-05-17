@@ -59,7 +59,7 @@ module.exports = View.extend({
     },
     highlight: function () {
         document.querySelector(this.whereAreYou(this.model.taxiX, this.model.taxiY)).classList.add('taxi-location');
-    },
+    }, // look at that "change" thing Luke put in frontend-js in slack
     render: function () {
         console.log('Render!');
         this.renderWithTemplate();
